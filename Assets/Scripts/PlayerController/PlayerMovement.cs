@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector2 movementDirection = new Vector2(horizontal, vertical).normalized;
-        movement = movementSpeed * Time.deltaTime * movementDirection;
+        movement = movementSpeed * movementDirection;
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement);
+        rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
     }
 }
