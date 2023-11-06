@@ -21,7 +21,6 @@ public class PostProcessDash : MonoBehaviour
         if (playerDashScript.GetIsDashing() && !isAnimating)
         {
             animate();
-            Debug.Log("negr");
         }
     }
 
@@ -38,7 +37,7 @@ public class PostProcessDash : MonoBehaviour
         {
             float percentage = time / delay;
             Debug.Log(percentage);
-            lensDistortion.intensity.value = Mathf.Lerp(0, -0.39f, distortionCurve.Evaluate(percentage));
+            lensDistortion.intensity.value = -distortionCurve.Evaluate(percentage);
             time = time + Time.deltaTime;
             yield return null;
         }

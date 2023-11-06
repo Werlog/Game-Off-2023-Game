@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
 [RequireComponent(typeof(PlayerMovement), typeof(Rigidbody2D))]
 public class PlayerDash : MonoBehaviour
 {
@@ -42,7 +41,7 @@ public class PlayerDash : MonoBehaviour
                 movement.enabled = false;
                 dashTime = 0f;
                 isDashing = true;
-
+                AudioManager.instance.PlaySFX(0);
                 ScreenShake.Singleton.ShakeCamera(5f, 0.25f);
             }
         }
