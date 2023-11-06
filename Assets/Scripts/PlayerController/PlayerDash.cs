@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(PlayerMovement), typeof(Rigidbody2D))]
 public class PlayerDash : MonoBehaviour
@@ -76,5 +77,15 @@ public class PlayerDash : MonoBehaviour
         {
             health.Damage(dashDamage);
         }
+    }
+
+    public bool GetIsDashing()
+    {
+        return isDashing;
+    }
+
+    public float GetDashLength()
+    {
+        return dashDuration;
     }
 }
