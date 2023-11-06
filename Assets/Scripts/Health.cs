@@ -8,6 +8,13 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int health = 100;
 
+    private Color naturalColor;
+
+    private void Start()
+    {
+        naturalColor = GetComponent<SpriteRenderer>().color;
+    }
+
     public virtual void Damage(int amount)
     {
         health -= amount;
@@ -34,7 +41,6 @@ public class Health : MonoBehaviour
         if (GetComponent<SpriteRenderer>() == null) yield break;
 
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        Color naturalColor = sprite.color;
         sprite.color = color;
         yield return new WaitForSeconds(0.1f);
         sprite.color = naturalColor;

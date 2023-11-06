@@ -41,6 +41,8 @@ public class PlayerDash : MonoBehaviour
                 movement.enabled = false;
                 dashTime = 0f;
                 isDashing = true;
+
+                ScreenShake.Singleton.ShakeCamera(5f, 0.25f);
             }
         }
 
