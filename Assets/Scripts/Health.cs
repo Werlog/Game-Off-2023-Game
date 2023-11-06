@@ -8,6 +8,8 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int health = 100;
 
+    [SerializeField] private GameObject deathParticleEffect;
+
     private Color naturalColor;
 
     private void Start()
@@ -19,7 +21,7 @@ public class Health : MonoBehaviour
     {
         health -= amount;
         StartCoroutine(Flash(Color.white));
-        if (health < 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -35,6 +37,7 @@ public class Health : MonoBehaviour
     public virtual void Die()
     {
         Destroy(gameObject);
+        Instantiate(deathParticleEffect, transform.position, Quaternion.identity);
     }
     private IEnumerator Flash(Color color)
     {
