@@ -39,6 +39,7 @@ ExportedObj/
 *.tmp
 *.user
 *.userprefs
+ProjectSettings
 *.pidb
 *.booproj
 *.svd

@@ -36,7 +36,6 @@ public class PostProcessDash : MonoBehaviour
         while (time < delay)
         {
             float percentage = time / delay;
-            Debug.Log(percentage);
             lensDistortion.intensity.value = -distortionCurve.Evaluate(percentage);
             time = time + Time.deltaTime;
             yield return null;
