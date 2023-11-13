@@ -11,6 +11,8 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private float dashDelay = 1f;
     [Header("Damage")]
     [SerializeField] private int dashDamage = 25;
+    [Header("Trails")]
+    [SerializeField] private List<TrailHandler> trailHandlers = new List<TrailHandler>();
 
     private PlayerMovement movement;
     private Rigidbody2D rb;
@@ -43,6 +45,11 @@ public class PlayerDash : MonoBehaviour
                 isDashing = true;
                 AudioManager.instance.PlaySFX(0);
                 ScreenShake.Singleton.ShakeCamera(5f, 0.25f);
+
+                foreach (TrailHandler trailHandler in trailHandlers)
+                {
+                    trailHandler.EnableTrail();
+                }
             }
         }
 
@@ -54,6 +61,11 @@ public class PlayerDash : MonoBehaviour
                 isDashing = false;
                 movement.enabled = true;
                 sinceDashed = 0f;
+
+                foreach (TrailHandler trailHandler in trailHandlers)
+                {
+                    trailHandler.DisableTrail();
+                }
             }
         }else
         {

@@ -11,8 +11,13 @@ public class TrailHandler : MonoBehaviour
         trailRenderer.enabled = false;
     }
 
-    private void Update()
+    public void EnableTrail()
     {
-        trailRenderer.enabled = playerDashingScript.GetIsDashing();
+        trailRenderer.enabled = true;
+    }
+
+    public void DisableTrail()
+    {
+        trailRenderer.enabled = false;
     }
 }
