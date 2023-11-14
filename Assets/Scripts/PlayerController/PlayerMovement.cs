@@ -12,9 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movement;
 
+    private SpriteRenderer spriteRenderer;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -24,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 movementDirection = new Vector2(horizontal, vertical).normalized;
         movement = movementSpeed * movementDirection;
+
+        if (horizontal < 0)
+        {
+            spriteRenderer.flipX = true;
+        }else if (horizontal > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     private void FixedUpdate()
