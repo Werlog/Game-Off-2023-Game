@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 38064992}
   - component: {fileID: 38064993}
   - component: {fileID: 38064994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 164035676}
   - component: {fileID: 164035678}
   - component: {fileID: 164035679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationZOffeset: 0
   flipRotation: 90
-  pistol: {fileID: 164035679}
 --- !u!114 &164035679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 269705133}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455881843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300002, y: 0.14000048, z: -10}
+  m_LocalPosition: {x: -1.9300014, y: 0.14000048, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1257,7 +1256,7 @@ GameObject:
   - component: {fileID: 1125039424}
   - component: {fileID: 1125039427}
   - component: {fileID: 1125039428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150554128}
   m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300002, y: 0.14000048, z: -10}
+  m_LocalPosition: {x: -1.9300014, y: 0.14000048, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2255,7 +2254,7 @@ GameObject:
   - component: {fileID: 1725668413}
   - component: {fileID: 1725668415}
   - component: {fileID: 1725668416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
